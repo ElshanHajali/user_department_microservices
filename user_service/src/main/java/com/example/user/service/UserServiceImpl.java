@@ -41,7 +41,7 @@ public class UserServiceImpl implements IUserService {
                         null;
 
         if (user != null) {
-            Department department = restTemplate.getForObject("http://localhost:9001/api/department/id/" + user.getDepartmentId(), Department.class);
+            Department department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/api/department/id/" + user.getDepartmentId(), Department.class);
             responseTemplateVO.setUser(user);
             responseTemplateVO.setDepartment(department);
         }
